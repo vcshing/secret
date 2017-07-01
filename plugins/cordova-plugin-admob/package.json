@@ -1,0 +1,136 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "cordova-plugin-admob",
+        "scope": null,
+        "escapedName": "cordova-plugin-admob",
+        "name": "cordova-plugin-admob",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "E:\\project\\api\\GitHub\\sendSMS\\node_modules"
+    ]
+  ],
+  "_from": "cordova-plugin-admob@latest",
+  "_id": "cordova-plugin-admob@3.2.4",
+  "_inCache": true,
+  "_location": "/cordova-plugin-admob",
+  "_nodeVersion": "4.2.1",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/cordova-plugin-admob-3.2.4.tgz_1478614715940_0.06402750639244914"
+  },
+  "_npmUser": {
+    "name": "floatinghotpot",
+    "email": "rjfun.mobile@gmail.com"
+  },
+  "_npmVersion": "2.14.7",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "cordova-plugin-admob",
+    "scope": null,
+    "escapedName": "cordova-plugin-admob",
+    "name": "cordova-plugin-admob",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-admob/-/cordova-plugin-admob-3.2.4.tgz",
+  "_shasum": "2dc671ab59a774b03ccb6c9a6ab34580b204d5e2",
+  "_shrinkwrap": null,
+  "_spec": "cordova-plugin-admob",
+  "_where": "E:\\project\\api\\GitHub\\sendSMS\\node_modules",
+  "author": {
+    "name": "Raymond Xie"
+  },
+  "bugs": {
+    "url": "https://github.com/floatinghotpot/cordova-plugin-admob/issues"
+  },
+  "cordova": {
+    "id": "cordova-plugin-admob",
+    "platforms": [
+      "android",
+      "ios",
+      "wp8",
+      "windows"
+    ]
+  },
+  "dependencies": {},
+  "description": "The FASTEST and EASIEST TO USE Cordova Admob plugin for Android, iOS and Windows phone. Pure open source without any traffic sharing. Allows preloading and automatic loading of interstitials and banners plus more. Works with Cordova, Phonegap, Intel XDK/C",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "2dc671ab59a774b03ccb6c9a6ab34580b204d5e2",
+    "tarball": "https://registry.npmjs.org/cordova-plugin-admob/-/cordova-plugin-admob-3.2.4.tgz"
+  },
+  "gitHead": "9b1f8e01817358399027dc89ffb1f3dea934f84d",
+  "homepage": "https://github.com/floatinghotpot/cordova-plugin-admob#readme",
+  "keywords": [
+    "cordova",
+    "admob",
+    "plugin",
+    "phonegap",
+    "intel-xdk",
+    "intel",
+    "xdk",
+    "crosswalk",
+    "ionic",
+    "meteor",
+    "ad",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios",
+    "cordova-wp8",
+    "cordova-amazon-fireos",
+    "google",
+    "ads",
+    "eclipse",
+    "android-studio",
+    "simple",
+    "easy",
+    "android",
+    "ios",
+    "windows",
+    "phonegap",
+    "monetization",
+    "monetisation",
+    "money",
+    "banner",
+    "interstitial",
+    "advertisement",
+    "advertising",
+    "earn",
+    "cordova-admob",
+    "admobpro",
+    "iad",
+    "flurry",
+    "mobfox",
+    "mopub",
+    "inmobi",
+    "chartboost",
+    "domob",
+    "rjfun"
+  ],
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "floatinghotpot",
+      "email": "rjfun.mobile@gmail.com"
+    }
+  ],
+  "name": "cordova-plugin-admob",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/floatinghotpot/cordova-plugin-admob.git"
+  },
+  "scripts": {},
+  "version": "3.2.4"
+}
