@@ -41,8 +41,8 @@ $$(document).on('deviceready', function() {
 
     // Set AdMobAds options:
     window.plugins.AdMob.setOptions({
-        publisherId: "ca-app-pub-3715336230214756/7045197420", // Required
-        interstitialAdId: "ca-app-pub-3715336230214756/8521930627", // Optional
+        publisherId: "ca-app-pub-3715336230214756/8883040621", // Required
+        interstitialAdId: "ca-app-pub-3715336230214756/1359773827", // Optional
         tappxIdAndroid: "", // Optional
         tappxShare: 0.1,
         isTesting: false, // receiving test ads (do not test with real ads as your account will be banned)				// Optional
@@ -56,27 +56,10 @@ $$(document).on('deviceready', function() {
 
     // Start showing banners (atomatic when autoShowBanner is set to true)
     window.plugins.AdMob.createBannerView();
-    window.plugins.AdMob.createInterstitialView();
-
-
-    window.plugins.AdMob.showAd(true,function(){
-      window.plugins.AdMob.showInterstitialAd(
-       true,
-       function(){
-         var target = "_blank";
-         var options = "location=no";
-         var url = "https://globfone.com/send-text/";
-        // window.open(url, target, options);
-       },
-       function(e){}
-     );
-    },function(){});
-
-
 
     // Request interstitial (will present automatically when autoShowInterstitial is set to true)
-    randomEvent(5, function() {
-
+    randomEvent(10, function() {
+      window.plugins.AdMob.createInterstitialView();
     });
 
     //navigator.vibrate([1000, 1000, 3000, 1000, 5000]);
@@ -120,24 +103,10 @@ $$(document).on('pageInit', '.page[data-page="twelveConstellationsDetail"]', fun
 
 
 $$(document).on('pause', function(e) {
-    if ($(".onoffswitch-checkbox2").is(':checked') === true) {
 
-    } else {
-        navigator.vibrate([]);
-        window.clearInterval(IntervalVibrate);
-        navigator.vibrate([]);
-        IntervalVibrate = "";
-    }
 })
 
 
 $$(document).on('resume', function(e) {
-    if (($(".onoffswitch-checkbox").is(':checked') === true)) {
-        navigator.vibrate([1000, 1000, 3000, 1000, 5000]);
-        if (IntervalVibrate == "") {
-            IntervalVibrate = window.setInterval(function() {
-                navigator.vibrate([1000, 1000, 3000, 1000, 5000]);
-            }, 11000);
-        }
-    }
+
 })

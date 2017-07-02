@@ -5,8 +5,20 @@ var menuSiteArr= []
 var loopLangArr = []
 
 
-defaultLangArr.push("Free SMS");
-defaultLangArr.push("Send SMS");
+defaultLangArr.push("Open Secret");
+defaultLangArr.push("Default Language");
+defaultLangArr.push("Your Name");
+defaultLangArr.push("Your Name");
+defaultLangArr.push("Your Secret");
+defaultLangArr.push("Your Secret");
+defaultLangArr.push("Gender");
+defaultLangArr.push("Male");
+defaultLangArr.push("Female");
+defaultLangArr.push("Submit");
+defaultLangArr.push("My Secret");
+defaultLangArr.push("Public Secret");
+defaultLangArr.push("View Public Secret (FaceBook)");
+
 defaultLangArr.push("其他應用");
 defaultLangArr.push("分享應用");
 

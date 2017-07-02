@@ -7,16 +7,16 @@ $(".otherApp").bind("click", function(e) {
 })
 
 $(".shareApp").bind("click", function(e) {
-    window.plugins.socialsharing.share("Free SMS", "Good App", "", "https://play.google.com/store/apps/details?id=com.skyexplorer.sendsms");
+    window.plugins.socialsharing.share("Secret", "Good App", "", "https://play.google.com/store/apps/details?id=com.skyexplorer.sendsms");
 })
 
 
 $(".sendsms").bind("click", function(e) {
-  e.preventDefault();
-  var target = "_blank";
-  var options = "location=no";
-  var url = "https://globfone.com/send-text/";
-  window.open(url, target, options);
+    e.preventDefault();
+    var target = "_blank";
+    var options = "location=no";
+    var url = "https://globfone.com/send-text/";
+    window.open(url, target, options);
 })
 
 $(".googleMap").bind("click", function(e) {
@@ -44,6 +44,13 @@ $(".gaodeMap").bind("click", function(e) {
     window.open(url, target, options);
 })
 
+$(".linkFaceBook").bind("click", function(e) {
+    e.preventDefault();
+    var target = "_system";
+    var options = "location=yes";
+    var url = "https://www.facebook.com/329311567515888/";
+    window.open(url, target, options);
+})
 
 $(".goodlist").bind("click", function(e) {
     $(".badlist").removeClass("active");
@@ -75,17 +82,11 @@ $('.startTutorials').on('click', function(e) {
 
 
 
-$(".linkFaceBook").bind("click", function(e) {
-    e.preventDefault();
-    var target = "_system";
-    var options = "location=yes";
-    var url = "https://www.facebook.com/Free-Talk-432150693808824/";
-    window.open(url, target, options);
-})
+
 
 
 $(".langen").bind("click", function() {
-    lang = "ru";
+    lang = "en";
     storageManager.setCookie("lang", {
         "selectedLang": lang
     });
@@ -110,40 +111,37 @@ $(".langDefault").bind("click", function() {
     pageInit();
 })
 
-
+var allowsubmit = 1;
 $$('.designFormSubmit').on('click', function() {
-
-    var formData = myApp.formToJSON('#designFormSubmit');
-    formData['locale'] = lang;
-    if (typeof(device) == "undefined") {
-        formData['deviceid'] = "";
-    } else {
-        formData['deviceid'] = device.uuid;
-    }
-
-    formData['userid'] = '';
-    myApp.showPreloader();
-    $.ajax({
-        type: 'POST',
-        url: 'http://gogogo.synology.me/api/genword/genImg.php',
-        data: formData,
-        dataType: 'JSON',
-        success: function(response) {
-            if (response.status == 1) {
+    if (allowsubmit = 1) {
+        allowsubmit = 0;
+        var formData = myApp.formToJSON('#designFormSubmit');
+        formData['locale'] = lang;
+        formData['deviceid'] = getDeviceID();
+        formData['userid'] = '';
+        myApp.showPreloader();
+        $.ajax({
+            type: 'POST',
+            url: 'http://gogogo.synology.me/api/secret/secretinsert.php',
+            data: formData,
+            dataType: 'JSON',
+            success: function(response) {
+                if (response.status == 1) {
+                    myApp.hidePreloader();
+                    alert("Submit Successful");
+                } else {
+                    myApp.hidePreloader();
+                    myApp.alert("Server Error, Please Try Again Later");
+                }
+                allowsubmit = 1;
+            },
+            error: function(response) {
                 myApp.hidePreloader();
-                $(".designImage").attr("src", response.domainPath);
-                $(".designImage").attr("data-id", response.insertId);
-
-            } else {
-                myApp.hidePreloader();
-                myApp.alert("Server Error, Please Try Again Later");
+                myApp.alert("Please Enter Value");
+                allowsubmit = 1;
             }
-        },
-        error: function(response) {
-            myApp.hidePreloader();
-            myApp.alert("Please Enter Value");
-        }
-    });
+        });
+    }
 })
 
 

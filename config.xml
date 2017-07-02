@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget android-versionCode="3" id="com.skyexplorer.sendsms" version="0.0.3" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Free SMS</name>
+<widget android-versionCode="3" id="com.skyexplorer.secret" version="0.0.3" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Secret</name>
     <description>
-        Quick Broswer For Send SMS
+        Secret
     </description>
     <author email="dev@cordova.apache.org" href="http://cordova.io">
         Sky Explorer
@@ -54,7 +54,7 @@
     <preference name="android-build-tool" value="gradle" />
     <preference name="loadUrlTimeoutValue" value="700000" />
     <preference name="permissions" value="none" />
-    <preference name="orientation" value="portrait" />
+    <!--<preference name="orientation" value="portrait" />-->
     <preference name="android-windowSoftInputMode" value="stateAlwaysHidden|adjustResize" />
     <feature name="Toast">
         <param name="android-package" value="nl.xservices.plugins.Toast" />

@@ -58,11 +58,11 @@
     <div class="panel panel-left panel-reveal">
 
         <div class="content-block otherApp">
-            <p class="wordOtherApps">其他應用</p>
+            <p class="wordOtherApps"> </p>
         </div>
         <div class="content-block">
-            <p class="shareApp">分享應用</p>
-          </div>
+            <p class="shareApp"> </p>
+        </div>
 
     </div>
 
@@ -75,9 +75,9 @@
                 <div class="navbar-inner">
                     <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
                     <div class="sliding" style="margin-left: auto;margin-right: auto; width:100%">
-                      <p class="buttons-row">
-                        <a href="#" class="titleButton center"><span class="word">Send SMS</span> (Quick Browser for Globfone)</a>
-                      </p>
+                        <p class="buttons-row">
+                            <a href="#" class="titleButton center"><span class="word">Open Secret</span></a>
+                        </p>
                     </div>
 
                     <div class="right">
@@ -95,11 +95,69 @@
                     <!-- Scrollable page content -->
 
                     <div class="page-content">
-                      <div class="pinch-zoom">
-                    							<!--<iframe src="image/map.png" style="width:100%"></iframe>-->
-                    							</div>
-                                  <br>
-                    							<p><a href="#" class="button button-fill button-big color-yellow word sendsms">Send SMS</a></p>  
+                        <p class="buttons-row">
+                            <a href="#" class="button langtc">繁中</a>
+                            <a href="#" class="button langDefault word">Default Language</a>
+                            <a href="#" class="button langen">English</a>
+                        </p>
+                        <div class="list-block">
+
+                            <ul>
+                                <form id="designFormSubmit">
+                                    <!-- Text inputs -->
+                                    <li>
+                                        <div class="item-content">
+                                            <div class="item-media"><i class="icon f7-icons">person</i></div>
+                                            <div class="item-inner">
+                                                <div class="item-title label word">Your Name</div>
+                                                <div class="item-input">
+                                                    <input type="text" class="word" name="name" placeholder="Your Name">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="item-content">
+                                            <div class="item-media"><i class="icon f7-icons">chat</i></div>
+                                            <div class="item-inner">
+                                                <div class="item-title label word">Your Secret</div>
+                                                <div class="item-input">
+                                                    <textarea class="word" name="contentText" placeholder="Your Secret" rows="14"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- Select -->
+                                    <li>
+                                        <div class="item-content">
+                                            <div class="item-media"><i class="icon f7-icons">persons</i></div>
+                                            <div class="item-inner">
+                                                <div class="item-title label word">Gender</div>
+                                                <div class="item-input">
+                                                    <select name="gender">
+                                                  <option class="word" value="M">Male</option>
+                                                  <option class="word" value="F">Female</option>
+                                                </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </form>
+                                <p class="buttons-row">
+                                    <a href="#" class="button designFormSubmit word button-fill color-red button-big">Submit</a>
+                                </p>
+                                <p class="buttons-row">
+                                    <a href="quotelist.html" class="button-big button word  button-fill color-orange ripple-pink">My Secret</a>
+                                </p>
+                                <p class="buttons-row">
+                                    <a href="quotelistPublic.html" class="button-big button word  button-fill color-orange ripple-pink">Public Secret</a>
+                                </p>
+
+                                <p class="buttons-row">
+                                    <a class="linkFaceBook button-big button viewPublished word  button-fill color-orange ripple-pink">View Public Secret (FaceBook)</a>
+                                </p>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
@@ -119,7 +177,7 @@
             <a href="tutorials.html" class="startTutorialsURL"></a>
         </div>
         <script type="text/javascript" src="lib/framework7/js/framework7.js"></script>
-          <script type="text/javascript" src="js/customjs/langArr.js"></script>
+        <script type="text/javascript" src="js/customjs/langArr.js"></script>
         <script type="text/javascript" src="js/customjs/function.js"></script>
         <script type="text/javascript" src="js/customjs/my-app.js"></script>
         <script type="text/javascript" src="js/customjs/bindEventShareFunction.js"></script>
@@ -129,13 +187,10 @@
 
 
         <script>
-
-
             $(function() {
                 lang = getCookie("lang", "selectedLang", checkLang());
                 mainPage();
             })
-
         </script>
 </body>
 

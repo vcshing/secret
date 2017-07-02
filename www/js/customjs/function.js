@@ -133,7 +133,7 @@ function setCookie(index, array) {
 }
 
 function setCookieIndex(index, contentIndex, content) {
-    debugger;
+    
     var contentIndex = String(contentIndex);
     var cookieArray = getCookie(index, "", [])
     if (contentIndex == "") {
@@ -322,4 +322,20 @@ function saveImageAsJpg(name, address) {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+}
+
+function getDeviceID(){
+  if (typeof(device) == "undefined") {
+      var deviceID = getCookie("deviceid", 0, "");
+      if(deviceID==""){
+        deviceID = getRandomNumber();
+      }
+      setCookieIndex("deviceid", 0, deviceID);
+      return deviceID;
+  } else {
+      return device.uuid;
+  }
+}
+function getRandomNumber() {
+  return String(new Date().valueOf()) + String(Math.floor(Math.random() * 1001));
 }
