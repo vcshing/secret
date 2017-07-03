@@ -184,7 +184,7 @@ myApp.onPageInit('quotelist', function(page) {
                                         success: function(response) {
                                             if (response.status == 1) {
                                                 setCookieIndex("publish", self.attr("data-id"), "1");
-debugger;
+
                                                 self.html("Published");
                                                 if (typeof(window.plugins) != "undefined") {
                                                   //  window.plugins.toast.showLongBottom('Published', function(a) {}, function(b) {})
@@ -292,7 +292,6 @@ myApp.onPageInit('quotelistPublic', function(page) {
             data: {
                 "page": page,
                 "lang": lang,
-                "deviceID": getDeviceID(),
                 "publish": "1"
             },
             dataType: 'JSON',
