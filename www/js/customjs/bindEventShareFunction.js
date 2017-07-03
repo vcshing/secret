@@ -119,11 +119,11 @@ $$('.designFormSubmit').on('click', function() {
         formData['locale'] = lang;
         formData['deviceid'] = getDeviceID();
         formData['userid'] = '';
-        if(formData['contentText']=""){
+        if(formData['contentText']==""){
           myApp.alert("Please Enter Secret");
           return;
         }
-        if(formData['name']!=""){
+        if(formData['name'] != ""){
           setCookieIndex("name",0,formData['name']);
         }
 
