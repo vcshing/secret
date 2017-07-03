@@ -5,7 +5,7 @@ var menuSiteArr= []
 var loopLangArr = []
 
 
-defaultLangArr.push("Open Secret");
+defaultLangArr.push("Secret Release");
 defaultLangArr.push("Default Language");
 defaultLangArr.push("Your Name");
 defaultLangArr.push("Your Name");
