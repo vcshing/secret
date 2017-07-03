@@ -169,7 +169,7 @@ myApp.onPageInit('quotelist', function(page) {
                             //  debugger;
                             myApp.modal({
                               title:  'Publish?',
-                              text: 'The Message will publish at InApp and Facebook And Cannot Delete at Facebook!',
+                              text: 'The Message will publish at InApp and Facebook Fage (Anonymous but Cannot Delete At Facebook)',
                               buttons: [
                                 {
                                   text: 'OK',
