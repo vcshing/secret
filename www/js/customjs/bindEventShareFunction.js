@@ -119,6 +119,14 @@ $$('.designFormSubmit').on('click', function() {
         formData['locale'] = lang;
         formData['deviceid'] = getDeviceID();
         formData['userid'] = '';
+        if(formData['contentText']=""){
+          myApp.alert("Please Enter Secret");
+          return;
+        }
+        if(formData['name']!=""){
+          setCookieIndex("name",0,formData['name']);
+        }
+
         myApp.showPreloader();
         $.ajax({
             type: 'POST',
@@ -128,7 +136,7 @@ $$('.designFormSubmit').on('click', function() {
             success: function(response) {
                 if (response.status == 1) {
                     myApp.hidePreloader();
-                    alert("Submit Successful");
+                    myApp.alert("Submit Successful");
                 } else {
                     myApp.hidePreloader();
                     myApp.alert("Server Error, Please Try Again Later");

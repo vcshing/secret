@@ -9,6 +9,9 @@ function pageInit() {
 
 function mainPage() {
     pageInit()
+    var userName = getCookie("name",0,"")
+    $(".formDataName").val(userName);
+  //  debugger;
     document.addEventListener("online", onOnline, false);
     document.addEventListener("offline", onOffline, false);
 
@@ -16,13 +19,6 @@ function mainPage() {
     //onOnline()
     function onOnline() {
         //	$(".pinch-zoom").html("<iframe src=\"https://globfone.com/send-text/\" width=\"100%\" height=\""+($(window).height()-30)+"px\"></iframe>");
-
-        var target = "_blank";
-        var options = "location=no";
-        var url = "https://globfone.com/send-text/";
-        //  window.open(url, target, options);
-
-
     }
 
     function onOffline() {
@@ -191,7 +187,8 @@ myApp.onPageInit('quotelist', function(page) {
 debugger;
                                                 self.html("Published");
                                                 if (typeof(window.plugins) != "undefined") {
-                                                    window.plugins.toast.showLongBottom('Published', function(a) {}, function(b) {})
+                                                  //  window.plugins.toast.showLongBottom('Published', function(a) {}, function(b) {})
+                                                    myApp.alert("Published");
                                                 } else {
                                                     myApp.alert("Published");
                                                 }
@@ -235,8 +232,8 @@ debugger;
                                 if (response.status == 1) {
                                     self.find("span").html("Deleted");
                                     if (typeof(window.plugins) != "undefined") {
-                                        window.plugins.toast.showLongBottom('It was deleted', function(a) {}, function(b) {})
-                                          self.parent().parent().hide()
+                                        myApp.alert("Deleted");
+                                        self.parent().parent().hide()
                                     } else {
                                         myApp.alert("Deleted");
                                         self.parent().parent().hide()
