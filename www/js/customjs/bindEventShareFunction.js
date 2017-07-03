@@ -137,6 +137,7 @@ $$('.designFormSubmit').on('click', function() {
                 if (response.status == 1) {
                     myApp.hidePreloader();
                     myApp.alert("Submit Successful");
+                    $(".formDataContent").val("");
                 } else {
                     myApp.hidePreloader();
                     myApp.alert("Server Error, Please Try Again Later");
