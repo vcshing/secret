@@ -4,7 +4,8 @@ var menuArr= []
 var menuSiteArr= []
 var loopLangArr = []
 
-
+defaultLangArr.push("其他應用");
+defaultLangArr.push("分享應用");
 defaultLangArr.push("Secret Release");
 defaultLangArr.push("Default Language");
 defaultLangArr.push("Your Name");
@@ -19,8 +20,7 @@ defaultLangArr.push("My Secret");
 defaultLangArr.push("Public Secret");
 defaultLangArr.push("View Public Secret (FaceBook)");
 
-defaultLangArr.push("其他應用");
-defaultLangArr.push("分享應用");
+
 
 
 menuArr.push("台北捷運");
